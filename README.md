@@ -66,27 +66,20 @@ Create a `.env` file in the root directory:
 
 ```env
 PORT=3000
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=your_password
+DB_NAME=assignment_db
+DB_PORT=3307
 ```
 
-Update `config/db.js` with your MySQL credentials if needed (default connects to `localhost:3306` with user `root`).
+Update these values if your MySQL server uses different credentials.
 
 ---
 
 ## Database Setup
 
-Run the following SQL to create the required database and table:
-
-```sql
-CREATE DATABASE IF NOT EXISTS assignment_db;
-
-USE assignment_db;
-
-CREATE TABLE IF NOT EXISTS users (
-  id    INT AUTO_INCREMENT PRIMARY KEY,
-  name  VARCHAR(100) NOT NULL,
-  email VARCHAR(100) NOT NULL
-);
-```
+Run the SQL script in [database.sql](database.sql) to create the required database and table.
 
 ---
 
